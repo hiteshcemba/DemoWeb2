@@ -73,6 +73,7 @@
     <Content Include="Category.aspx" />
     <Content Include="CategoryNew.aspx" />
     <Content Include="DemoGrid.aspx" />
+    <Content Include="SQL\Create.sql" />
     <Content Include="Styles\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />

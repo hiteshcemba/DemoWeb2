@@ -32,5 +32,46 @@ namespace DemoWeb2
             }
                 
         }
+
+        protected void Grid_PageIndexChanged(object source, DataGridPageChangedEventArgs e)
+        {
+            Grid.CurrentPageIndex = e.NewPageIndex;
+            BindData();
+        }
+        protected void Grid_EditCommand(object source, DataGridCommandEventArgs e)
+        {
+            Grid.EditItemIndex = e.Item.ItemIndex;
+            BindData();
+        }
+        protected void Grid_CancelCommand(object source, DataGridCommandEventArgs e)
+        {
+            Grid.EditItemIndex = -1;
+            BindData();
+        }
+        protected void Grid_DeleteCommand(object source, DataGridCommandEventArgs e)
+        {
+          
+        }
+        protected void Grid_UpdateCommand(object source, DataGridCommandEventArgs e)
+        {
+            
+        }
+
+        protected void Grid_ItemDataBound(object sender, DataGridItemEventArgs e)
+        {
+            try
+            {
+                if ((e.Item.ItemType != ListItemType.Header))
+                {
+                    e.Item.Cells[5].Text = "Test";
+                }
+
+            }
+            catch (Exception ex)
+            {
+                lblerror.Text = "Error in Grid_ItemDataBound : " + ex.Message;
+            }
+        }
+
     }
 }

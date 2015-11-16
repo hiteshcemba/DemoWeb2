@@ -9,9 +9,9 @@
      <asp:Label ID="lblerror" runat="server"  ForeColor="Red"></asp:Label>
     <br />
 
- <asp:DataGrid ID="Grid" runat="server" PageSize="5" AllowPaging="True" DataKeyField="EmpId"
+ <asp:DataGrid ID="Grid" runat="server" PageSize="2" AllowPaging="True" DataKeyField="EmpId"
 AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" OnPageIndexChanged="Grid_PageIndexChanged" OnCancelCommand="Grid_CancelCommand"
-OnDeleteCommand="Grid_DeleteCommand" OnEditCommand="Grid_EditCommand" OnUpdateCommand="Grid_UpdateCommand">
+OnDeleteCommand="Grid_DeleteCommand" OnEditCommand="Grid_EditCommand" OnUpdateCommand="Grid_UpdateCommand" OnItemDataBound="Grid_ItemDataBound">
 <Columns>
 <asp:BoundColumn HeaderText="EmpId" DataField="EmpId">
 </asp:BoundColumn>
@@ -23,7 +23,7 @@ OnDeleteCommand="Grid_DeleteCommand" OnEditCommand="Grid_EditCommand" OnUpdateCo
 </asp:BoundColumn>
 <asp:BoundColumn DataField="EmailId" HeaderText="EmailId">
 </asp:BoundColumn>
-<asp:BoundColumn DataField="EmpJoining" HeaderText="EmpJoining">
+<asp:BoundColumn DataField="EmpJoining" HeaderText="EmpJoining"  >
 </asp:BoundColumn>
 <asp:EditCommandColumn EditText="Edit" CancelText="Cancel" UpdateText="Update" HeaderText="Edit">
 </asp:EditCommandColumn>
