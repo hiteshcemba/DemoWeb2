@@ -10,6 +10,7 @@ namespace DemoWeb2.Classes
         public AllDemoWeb2BLL()
         {
             CategoryDB = new CategoryDB(AllConstants.CONNECTIONSTRING);
+            EmployeeDB = new EmployeeDB(AllConstants.CONNECTIONSTRING);
          
         }
         public void Dispose()
@@ -19,6 +20,7 @@ namespace DemoWeb2.Classes
 
 
         public CategoryDB CategoryDB { get; set; }
+        public EmployeeDB EmployeeDB { get; set; }
         //public Logins Logins { get; set; }
         //public SubCategories SubCategories { get; set; }
 
