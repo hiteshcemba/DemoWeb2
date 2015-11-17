@@ -47,6 +47,59 @@ namespace DemoWeb2.Classes
                 throw ex;
             }
         }
+        public bool Add(DemoWeb2.Model.Employee objEmp)
+        {
+            try
+            {
+
+                DAL DB = new DAL(ConnectionString);
+
+                objEmp.EmpId = GetNextEmpID();
+                string sqlstring = "INSERT INTO EMPLOYEE(F_Name,L_Name,City,EmailId,Id) VALUES ('" + CommonFunctions.SqlSafe(objEmp.F_Name) + "','" +  CommonFunctions.SqlSafe(objEmp.L_Name) + "','" +  CommonFunctions.SqlSafe(objEmp.City) + "','" +  CommonFunctions.SqlSafe(objEmp.EmailId) + "'," + objEmp.Id.ToString() + ")";
+                int ROWCOUNT = DB.ExecuteCommandNoQuery(sqlstring);
+                if (ROWCOUNT > 0)
+                    return true;
+                else
+                    return false;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public int GetNextEmpID()
+        {
+            try
+            {
+                int result = -1;
+                DAL DB = new DAL(ConnectionString);
+                string sqlstring = "SELECT MAX(EmpId) FROM Employee";
+                DataSet DS = DB.GetDataSet(sqlstring, "TABLE1");
+                if (DS != null)
+                {
+                    if (DS.Tables.Count > 0)
+                    {
+                        if (DS.Tables[0].Rows.Count > 0)
+                        {
+                            if (DS.Tables[0].Rows[0][0] != DBNull.Value)
+                            {
+                                result = int.Parse(DS.Tables[0].Rows[0][0].ToString()) + 1;
+
+                            }
+
+                        }
+                    }
+                }
+                return result;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
+
 
     }
 }

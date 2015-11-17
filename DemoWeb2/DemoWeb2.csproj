@@ -73,6 +73,8 @@
     <Content Include="Category.aspx" />
     <Content Include="CategoryNew.aspx" />
     <Content Include="DemoGrid.aspx" />
+    <Content Include="DemoGrid2.aspx" />
+    <Content Include="DemoGridNew.aspx" />
     <Content Include="SQL\Create.sql" />
     <Content Include="Styles\Site.css" />
     <Content Include="Default.aspx" />
@@ -141,6 +143,7 @@
     <Compile Include="Classes\AllConstants.cs" />
     <Compile Include="Classes\AllDemoMVCBLL.cs" />
     <Compile Include="Classes\CategoryDB.cs" />
+    <Compile Include="Classes\CommonFunctions.cs" />
     <Compile Include="Classes\DAL.cs" />
     <Compile Include="Classes\EmployeeDB.cs" />
     <Compile Include="Default.aspx.cs">
@@ -156,6 +159,20 @@
     </Compile>
     <Compile Include="DemoGrid.aspx.designer.cs">
       <DependentUpon>DemoGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DemoGrid2.aspx.cs">
+      <DependentUpon>DemoGrid2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DemoGrid2.aspx.designer.cs">
+      <DependentUpon>DemoGrid2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DemoGridNew.aspx.cs">
+      <DependentUpon>DemoGridNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DemoGridNew.aspx.designer.cs">
+      <DependentUpon>DemoGridNew.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

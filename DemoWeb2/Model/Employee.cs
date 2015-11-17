@@ -13,6 +13,7 @@ namespace DemoWeb2.Model
         public string City { get; set; }
         public string EmailId { get; set; }
         public DateTime  EmpJoining { get; set; }
+        public int Id { get; set; }
 
 
     }

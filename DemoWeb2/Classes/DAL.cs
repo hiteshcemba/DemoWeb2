@@ -53,11 +53,14 @@ namespace DemoWeb2.Classes
             DBCommand = DBConnection.CreateCommand();
         }
 
+     
+
         public int ExecuteCommandNoQuery(string strSQL)
         {
             int NumRows = -1;
             using (SqlConnection connection = new SqlConnection(ConnectionString))
             {
+
                 using (SqlCommand cmd = new SqlCommand(strSQL, connection))
                 {
                     connection.Open();

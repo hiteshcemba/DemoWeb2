@@ -16,13 +16,20 @@ namespace DemoWeb2
         
         protected void Page_Load(object sender, EventArgs e)
         {
-            lblerror.Text = "";
-            lblerror.ForeColor = System.Drawing.Color.Red;
-            if (!IsPostBack)
+             try
             {
+                lblerror.Text = "";
+                lblerror.ForeColor = System.Drawing.Color.Red;
+                if (!IsPostBack)
+                {
 
 
+                }
             }
+             catch (Exception ex)
+             {
+                 lblerror.Text = "Error in Page_Load : " + ex.Message;
+             }
 
         }
 

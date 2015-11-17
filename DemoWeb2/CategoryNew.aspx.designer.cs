@@ -8,9 +8,10 @@
 //------------------------------------------------------------------------------
 
 namespace DemoWeb2 {
-    
-    
-    public partial class CategoryNew {
+
+
+    public partial class CategoryNew
+    {
         
         /// <summary>
         /// lblerror control.

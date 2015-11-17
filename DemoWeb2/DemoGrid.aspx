@@ -9,7 +9,7 @@
      <asp:Label ID="lblerror" runat="server"  ForeColor="Red"></asp:Label>
     <br />
 
- <asp:DataGrid ID="Grid" runat="server" PageSize="2" AllowPaging="True" DataKeyField="EmpId"
+ <asp:DataGrid ID="Grid" runat="server" PageSize="10" AllowPaging="True" DataKeyField="EmpId"
 AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" OnPageIndexChanged="Grid_PageIndexChanged" OnCancelCommand="Grid_CancelCommand"
 OnDeleteCommand="Grid_DeleteCommand" OnEditCommand="Grid_EditCommand" OnUpdateCommand="Grid_UpdateCommand" OnItemDataBound="Grid_ItemDataBound">
 <Columns>
